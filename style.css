@@ -1,0 +1,189 @@
+p {
+    margin: 0px;
+}
+body {
+    margin: 0px;
+    background: hsl(0, 100%, 74%) 
+        url(./images/bg-intro-desktop.png) 
+        no-repeat;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10%;
+    height: 100vh;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    align-items: center; }
+    .txt {
+        font-size: 14px;
+    }
+    .ctn {
+        display: flex; }
+        .md-ctn {
+            width: 50%; }
+            .intro {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                box-sizing: border-box;
+                padding: 0px 25px; }
+                .heading {
+                    font-size: 50px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    /* line-height: 60px; */
+                }
+                .preamble {
+                    font-size: 17px;
+                    line-height: 25px;
+                }
+            .sign-up-area {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; }
+                .trial-ads {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 45px;
+                    box-shadow: 0px 7px 5px hsl(0, 0%, 35%);
+                    background-color: hsl(248, 32%, 49%);
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                }
+                .form-ctn {
+                    display: block;
+                    width: 100%;
+                }
+                #sign-up-form {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    box-shadow: 0px 7px 5px hsl(0, 0%, 35%);
+                    width: 100%;
+                    background-color: #ffffff;
+                    border-radius: 7px;
+                    padding: 30px; }
+                    .wide-input {
+                        height: 45px;
+                        border-radius: 7px;
+                        border: 1px solid hsl(246, 25%, 77%);
+                        margin-bottom: 20px;
+                        padding-left: 20px;
+                        outline: none;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                    .wide-input:focus {
+                        font-weight: 700;
+                        border: 1px solid hsl(249, 10%, 26%);
+                    }
+                    .invalid-input {
+                        border: 2px solid hsl(0, 100%, 74%);
+                        color: hsl(0, 100%, 74%);
+                        background-image: url(./images/icon-error.svg);
+                        background-size: 25px;
+                        background-repeat: no-repeat;
+                        background-position: 95%;
+                        margin: 0px;
+                    }
+                    .invalid-input:focus {
+                        font-weight: 700;
+                        border: 2px solid hsl(0, 100%, 74%);
+                    }
+                    .claim-btn {
+                        height:  40px;
+                        border: none;
+                        background-color: hsl(154, 59%, 51%);
+                        border-radius: 7px;
+                        color: white;
+                        cursor: pointer;
+                        margin: 5px 0px;
+                    }
+                    .terms-cond {
+                        margin-top: 10px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: hsl(246, 25%, 77%);
+                    }
+                    .terms-cond strong {
+                        color: hsl(0, 100%, 74%) ;
+                    }
+                    .error-msg {
+                        display: none;
+                        color: hsl(0, 100%, 74%);
+                        margin-top: 5px;
+                        margin-bottom: 15px;
+                        text-align: right;
+                        font-size: 11px;
+                    }
+                    .msg {
+                        display: block;
+                    }
+            
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 20px;
+        height: unset;
+    }
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 0px;
+        margin-bottom: 60px;
+        text-align: center;
+        width: 100%;
+    }
+    .heading {
+        width: 100%;
+        font-size: 35px;
+    }
+    .preamble {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+    .trial-ads {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: unset;
+        box-sizing: border-box;
+        box-shadow: 0px 7px 2px hsla(0, 0%, 35%, 0.404);
+        background-color: hsl(248, 32%, 49%);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 13px 60px;
+    }
+    .trial-ads .txt {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+    } 
+    .sign-up-area {
+        width: 100%;
+    }
+    #sign-up-form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        box-shadow: 0px 7px 5px hsla(0, 0%, 35%, 0.404);
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 7px;
+        padding: 20px;
+    }
+}

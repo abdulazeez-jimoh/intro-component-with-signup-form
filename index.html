@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+    <div class="ctn md-ctn intro">
+        <p class="txt md-txt heading">
+            Learn to code by watching others
+        </p>
+        <p class="txt preamble">
+            See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable. 
+        </p>
+    </div>
+    <div class="ctn md-ctn sign-up-area">
+        <div class="ctn md-ctn trial-ads">
+            <p class="txt">
+                <strong>Try it free 7 days</strong> then $20/mo. thereafter
+            </p>
+        </div>
+        <div class="ctn md-ctn form-ctn">
+            <form name="signUpForm" id="sign-up-form" onsubmit="return formValidation();">
+                <input name="firstname" id="firstname" type="text" class="input wide-input" placeholder="First Name">
+                <em class="error-msg" id="firstname-error">
+                    <strong>First Name cannot be empty</strong>
+                </em>
+                <input name="lastname" id="lastname" type="text" class="input wide-input" placeholder="Last Name">
+                <em class="error-msg" id="lastname-error">
+                    <strong>Last Name cannot be empty</strong>
+                </em>
+                <input name="email" id="email" type="text" class="input wide-input" placeholder="Email Address">
+                <em class="error-msg" id="email-error">
+                    <strong>Looks like this is not an email</strong>
+                </em>
+                <input name="password" id="password" type="password" class="input wide-input" placeholder="Password">
+                <em class="error-msg" id="password-error">
+                    <strong>Password cannot be empty</strong>
+                </em>
+                <input type="submit" name="submit" value="CLAIM YOUR FREE TRIAL" class="claim-btn">
+                <p class="txt terms-cond">
+                    By clicking the button, you are agreeing to our <strong>Terms and Services</strong>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
