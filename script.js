@@ -65,7 +65,7 @@ function passwordValidation(password, passwordError) {
     } else {
         password.classList.remove("invalid-input");
         passwordError.style.display = "none";
-        // window.location.reload()
+        window.location.reload()
         return true;
     }
 }
