@@ -9,6 +9,7 @@ function validateForm(event) {
         let name = input.name
         let id = input.id
         let isValid= input.validity.valid
+        // Define a valid email pattern
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let hasSpace = input.value.includes(" ")
         let isMailValid = input.value.match(mailformat)
@@ -30,6 +31,7 @@ function validateForm(event) {
                 input.placeholder = ""
                 document.getElementById(`${id}-error`).innerText = `Looks like this is not an ${name}`
             }
+            // Check if input value contain space
             if (hasSpace) {
                 input.classList.add("invalid-input")
                 input.placeholder = ""
