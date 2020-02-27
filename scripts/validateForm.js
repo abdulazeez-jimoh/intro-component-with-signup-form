@@ -16,7 +16,6 @@ function validateForm(event) {
         if (!isValid || hasSpace || !isMailValid) {
             // Stop all default events
             event.preventDefault()
-            input.classList.add("invalid-input")
             if (input.validity.valueMissing) {
                 input.classList.add("invalid-input")
                 input.placeholder = ""
@@ -29,18 +28,19 @@ function validateForm(event) {
             }
             if (name === "Email" && !isMailValid) {
                 input.placeholder = ""
+                input.classList.add("invalid-input")
                 document.getElementById(`${id}-error`).innerText = `Looks like this is not an ${name}`
             }
             // Check if input value contain space
-            if (hasSpace) {
-                input.classList.add("invalid-input")
-                input.placeholder = ""
-                document.getElementById(`${id}-error`).innerText = `${name} cannot contain space`
-            }
+            // if (hasSpace) {
+            //     input.classList.add("invalid-input")
+            //     input.placeholder = ""
+            //     document.getElementById(`${id}-error`).innerText = `${name} cannot contain space`
+            // }
             
         } else {
             input.classList.remove("invalid-input")
-            // document.getElementById(`${id}-error`).innerText = ""
+            document.getElementById(`${id}-error`).innerText = ""
         }
         // return the input field style to default when user tries to input
         input.oninput = function () {
