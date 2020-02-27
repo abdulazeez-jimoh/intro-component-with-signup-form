@@ -3,7 +3,7 @@ body {
     background: hsl(0, 100%, 74%) url(../images/bg-intro-desktop.png) no-repeat;
     display: flex;
     box-sizing: border-box;
-    padding: 10%;
+    padding: 0px 10%;
     height: 100vh;
     color: white;
     font-size: 16px;

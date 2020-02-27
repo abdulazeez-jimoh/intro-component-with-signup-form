@@ -8,12 +8,13 @@ function validateForm(event) {
     userInput.forEach(input => {
         let name = input.name
         let id = input.id
+        let value = input.value
         let isValid= input.validity.valid
         // Define a valid email pattern
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let hasSpace = input.value.includes(" ")
         let isMailValid = input.value.match(mailformat)
-        if (!isValid || hasSpace || !isMailValid) {
+        if (value === "" || hasSpace || !isMailValid) {
             // Stop all default events
             event.preventDefault()
             if (input.validity.valueMissing) {
@@ -26,18 +27,16 @@ function validateForm(event) {
                 input.placeholder = ""
                 document.getElementById(`${id}-error`).innerText = `${name} cannot be empty`
             }
-            if (name === "Email" && !isMailValid) {
+            if (name === "Email" && !isMailValid && input.validity.typeMismatch) {
                 input.placeholder = ""
-                input.classList.add("invalid-input")
                 document.getElementById(`${id}-error`).innerText = `Looks like this is not an ${name}`
             }
             // Check if input value contain space
-            // if (hasSpace) {
-            //     input.classList.add("invalid-input")
-            //     input.placeholder = ""
-            //     document.getElementById(`${id}-error`).innerText = `${name} cannot contain space`
-            // }
-            
+            if (hasSpace) {
+                input.classList.add("invalid-input")
+                input.placeholder = ""
+                document.getElementById(`${id}-error`).innerText = `${name} cannot contain space`
+            }   
         } else {
             input.classList.remove("invalid-input")
             document.getElementById(`${id}-error`).innerText = ""
