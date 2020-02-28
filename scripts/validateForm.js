@@ -14,7 +14,7 @@ function validateForm(event) {
         let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let hasSpace = input.value.includes(" ")
         let isMailValid = input.value.match(mailformat)
-        if (!isValid || hasSpace || (name === "Email" && !isMailValid)) {
+        if (!isValid || hasSpace) {
             // Stop all default events
             event.preventDefault()
             input.classList.add("invalid-input")
@@ -22,7 +22,7 @@ function validateForm(event) {
             if (input.validity.valueMissing) {
                 document.getElementById(`${id}-error`).innerText = `${name} cannot be empty`
             }
-            if (name === "Email" && !isMailValid) {
+            if (input.validity.typeMismatch) {
                 document.getElementById(`${id}-error`).innerText = `Looks like this is not an ${name}`
             }
             // Check if input value contain space
